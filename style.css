@@ -494,7 +494,7 @@ main { position: relative; z-index: 1; }
   border-radius: 26px;
   overflow: hidden;
   padding-bottom: 14px;
-  min-height: 520px;
+  height: 520px;
   display: flex;
   flex-direction: column;
 }
@@ -558,12 +558,12 @@ main { position: relative; z-index: 1; }
 .app-screen {
   display: none;
   flex: 1;
+  overflow-y: auto;
 }
 .app-screen.is-active {
   display: flex;
   flex-direction: column;
 }
-
 .app-task {
   padding: 16px 16px 12px;
 }
@@ -1025,9 +1025,9 @@ main { position: relative; z-index: 1; }
     padding: 8px;
   }
   .phone-frame__screen {
-    border-radius: 18px;
-    min-height: 480px;
-  }
+  border-radius: 18px;
+  height: 480px;
+}
   .section--preview {
     padding-left: 12px;
     padding-right: 12px;
