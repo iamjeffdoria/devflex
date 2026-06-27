@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DevFlex — Stop being judged by a memory test</title>
+  <meta name="description" content="Coding exams test memory. The job tests everything else. DevFlex is for developers tired of being judged by closed-book syntax tests." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+  <div class="noise"></div>
+
+  <header class="topbar">
+    <div class="topbar__inner">
+      <span class="logo">dev<span class="logo__accent">flex</span></span>
+      <span class="topbar__tag">// free for devs</span>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero__chrome">
+        <span class="dot dot--red"></span>
+        <span class="dot dot--yellow"></span>
+        <span class="dot dot--green"></span>
+        <span class="hero__path">~/career/why-am-i-still-unemployed.md</span>
+      </div>
+
+      <div class="hero__inner">
+        <p class="commit">
+          <span class="commit__hash">commit a1b2c3d</span>
+          <span class="commit__author">Author: a developer who actually ships</span>
+        </p>
+
+        <h1 class="hero__headline">I Google things while I code.<br>Apparently that disqualifies me.<span class="cursor"></span></h1>
+
+        <p class="hero__body">
+          I've shipped real products. Features real people use. Bugs I tracked down at 1am
+          by reading docs, checking Stack Overflow, asking a teammate who'd seen it before.
+        </p>
+        <p class="hero__body">
+          Then I sit down for a "coding exam" and none of that counts. No Google. No docs.
+          No team. Just me, a blank editor, and a clock — tested on whether I memorized
+          syntax I'd normally look up in ten seconds.
+        </p>
+        <p class="hero__body hero__body--emphasis">
+          That's not how I work. That's not how <em>any</em> working developer works.
+          So why is it the thing deciding if I'm good enough to get hired?
+        </p>
+
+        <form class="waitlist-form" id="waitlist-form">
+          <label for="email" class="sr-only">Email address</label>
+          <input type="email" id="email" name="email" placeholder="you@example.com" required autocomplete="email" />
+          <button type="submit" id="submit-btn">
+            <span class="btn-label">Join waitlist</span>
+            <span class="btn-arrow">&rarr;</span>
+          </button>
+        </form>
+        <p class="form-note" id="form-note">Free for developers. No spam. Ever.</p>
+
+        <p class="social-proof">
+          <span class="social-proof__dot"></span>
+          <span id="waitlist-count">253</span> Filipino devs already waiting
+        </p>
+      </div>
+    </section>
+
+    <!-- RELATABLE MOMENTS -->
+    <section class="section section--moments">
+      <p class="eyebrow">// what actually happened to me</p>
+      <div class="moments-grid">
+        <div class="moment-card" data-reveal>
+          <span class="moment-card__icon"><i data-lucide="flame"></i></span>
+          <p>Shipped a full app to real users — froze on a syntax question I'd normally just look up.</p>
+        </div>
+        <div class="moment-card" data-reveal>
+          <span class="moment-card__icon"><i data-lucide="bug"></i></span>
+          <p>Debug production issues for a living — "no Google allowed" turned my brain off.</p>
+        </div>
+        <div class="moment-card" data-reveal>
+          <span class="moment-card__icon"><i data-lucide="book-open"></i></span>
+          <p>Read docs and pick up new stuff fast on the job — nowhere does the interview test that.</p>
+        </div>
+        <div class="moment-card" data-reveal>
+          <span class="moment-card__icon"><i data-lucide="frown"></i></span>
+          <p>Lost the role to someone who grinded practice problems for months, not someone who's actually built things.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- BUILDING THIS -->
+    <section class="section section--building">
+      <div class="building-card">
+        <span class="building-card__icon"><i data-lucide="hammer"></i></span>
+        <div class="building-card__text">
+          <p class="building-card__label">// what I'm doing about it</p>
+          <p class="building-card__headline">I'm building an app to fix this.</p>
+          <p class="building-card__body">
+            Not just a landing page — an actual product. Still early, still shaping it,
+            but the direction is locked: stop judging developers on memory, start judging
+            them on how they actually work.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- APP PREVIEW -->
+    <section class="section section--preview">
+      <p class="eyebrow">// early look</p>
+      <h2 class="section-title">Here's roughly what I'm building.</h2>
+      <p class="preview-caption">
+        Two things the interview never checks — how you actually solve problems, and what
+        you've already built. DevFlex shows both: an open-book assessment where docs are
+        allowed, and a real GitHub profile so your actual work speaks for itself.
+      </p>
+
+      <p class="preview-hint">
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12s2.545-5 7-5c4.454 0 7 5 7 5s-2.546 5-7 5c-4.455 0-7-5-7-5z"/><path d="M12 13a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"/><path d="M21 17v2a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-2"/><path d="M21 7V5a2 2 0 0 1-2-2H5a2 2 0 0 1-2 2v2"/></svg>
+        tap a tab below to switch screens
+      </p>
+
+      <div class="phone-frame">
+        <div class="phone-frame__notch"></div>
+        <div class="phone-frame__screen">
+
+          <div class="app-statusbar">
+            <span>9:41</span>
+            <span class="app-statusbar__icons">
+              <i data-lucide="wifi"></i>
+              <i data-lucide="battery-full"></i>
+            </span>
+          </div>
+
+          <div class="app-topbar">
+            <span class="app-topbar__logo">dev<span class="logo__accent">flex</span></span>
+            <span class="app-badge app-badge--open" id="app-screen-badge">
+              <i data-lucide="unlock"></i> docs allowed
+            </span>
+          </div>
+
+          <!-- SCREEN 1: ASSESSMENT -->
+          <div class="app-screen is-active" data-screen="assessment">
+            <div class="app-task">
+              <p class="app-task__label">task 2 of 5 · debugging</p>
+              <p class="app-task__title">Fix the broken pagination in this endpoint</p>
+              <p class="app-task__desc">
+                Users report page 2+ returns duplicate results. Find the bug and fix it
+                — Google, docs, and Stack Overflow are all fair game.
+              </p>
+            </div>
+
+            <div class="app-editor">
+              <div class="app-editor__bar">
+                <span class="dot dot--red"></span>
+                <span class="dot dot--yellow"></span>
+                <span class="dot dot--green"></span>
+                <span class="app-editor__filename">orders.py</span>
+              </div>
+              <pre class="app-editor__code"><span class="code-line"><span class="code-num">1</span><span class="code-kw">def</span> get_orders(page):</span>
+<span class="code-line"><span class="code-num">2</span>    offset = page * PAGE_SIZE</span>
+<span class="code-line code-line--bug"><span class="code-num">3</span>    <span class="code-comment"># bug: offset math is off by one page</span></span>
+<span class="code-line"><span class="code-num">4</span>    <span class="code-kw">return</span> db.query(Order)</span>
+<span class="code-line"><span class="code-num">5</span>        .offset(offset).limit(PAGE_SIZE)</span></pre>
+            </div>
+
+            <div class="app-search-hint">
+              <i data-lucide="search"></i>
+              <span>searched "sqlalchemy offset pagination off by one" — 12s ago</span>
+            </div>
+          </div>
+
+          <!-- SCREEN 2: GITHUB PROFILE -->
+          <div class="app-screen" data-screen="profile">
+            <div class="app-profile">
+              <div class="app-profile__header">
+                <span class="app-profile__avatar">JD</span>
+                <div>
+                  <p class="app-profile__name">Juan dela Cruz</p>
+                  <p class="app-profile__handle">@juandelacruz · GitHub verified</p>
+                </div>
+              </div>
+              <div class="app-profile__stats">
+                <div class="app-profile__stat">
+                  <span class="app-profile__stat-num">14</span>
+                  <span class="app-profile__stat-label">repos</span>
+                </div>
+                <div class="app-profile__stat">
+                  <span class="app-profile__stat-num">312</span>
+                  <span class="app-profile__stat-label">commits</span>
+                </div>
+                <div class="app-profile__stat">
+                  <span class="app-profile__stat-num">6</span>
+                  <span class="app-profile__stat-label">day streak</span>
+                </div>
+              </div>
+              <div class="app-repo-card">
+                <p class="app-repo-card__name"><i data-lucide="folder-git-2"></i> sari-sari-pos</p>
+                <p class="app-repo-card__desc">Offline-first point-of-sale for small stores.</p>
+                <span class="app-repo-card__lang">Kotlin</span>
+              </div>
+              <div class="app-repo-card">
+                <p class="app-repo-card__name"><i data-lucide="folder-git-2"></i> paluwagan-app</p>
+                <p class="app-repo-card__desc">Group savings tracker with auto reminders.</p>
+                <span class="app-repo-card__lang">JavaScript</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- BOTTOM NAV: assessment tab | profile tab -->
+          <div class="app-bottom-nav">
+            <button class="app-bottom-nav__item is-active" data-tab="assessment" aria-label="Assessment view">
+              <i data-lucide="code"></i>
+              <span class="app-bottom-nav__label">Assessment</span>
+            </button>
+            <button class="app-bottom-nav__item" data-tab="profile" aria-label="GitHub profile view">
+              <i data-lucide="git-branch"></i>
+              <span class="app-bottom-nav__label">GitHub</span>
+            </button>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- THE DIFF -->
+    <section class="section section--diff">
+      <p class="eyebrow">// the part that bugs me most</p>
+      <h2 class="section-title">These are different skills.<br>Hiring only checks one of them.</h2>
+
+      <div class="diff-block">
+        <div class="diff-block__header">
+          <span class="diff-block__filename">hiring_process.diff</span>
+        </div>
+        <div class="diff-block__body">
+          <div class="diff-line diff-line--minus" data-reveal>
+            <span class="diff-line__marker">-</span>
+            <span class="diff-line__text">Recall syntax from memory, under a clock</span>
+          </div>
+          <div class="diff-line diff-line--minus" data-reveal>
+            <span class="diff-line__marker">-</span>
+            <span class="diff-line__text">Know textbook algorithms by heart</span>
+          </div>
+          <div class="diff-line diff-line--minus" data-reveal>
+            <span class="diff-line__marker">-</span>
+            <span class="diff-line__text">Perform with zero outside help</span>
+          </div>
+          <div class="diff-line diff-line--minus" data-reveal>
+            <span class="diff-line__marker">-</span>
+            <span class="diff-line__text">However much free time you had to grind beforehand</span>
+          </div>
+          <div class="diff-line diff-line--plus" data-reveal>
+            <span class="diff-line__marker">+</span>
+            <span class="diff-line__text">Find the right answer fast when you don't know something</span>
+          </div>
+          <div class="diff-line diff-line--plus" data-reveal>
+            <span class="diff-line__marker">+</span>
+            <span class="diff-line__text">Read unfamiliar code or docs and get productive quickly</span>
+          </div>
+          <div class="diff-line diff-line--plus" data-reveal>
+            <span class="diff-line__marker">+</span>
+            <span class="diff-line__text">Break a real problem into pieces you can actually solve</span>
+          </div>
+          <div class="diff-line diff-line--plus" data-reveal>
+            <span class="diff-line__marker">+</span>
+            <span class="diff-line__text">Have actually built and shipped something that works</span>
+          </div>
+        </div>
+        <div class="diff-block__footer">
+          <span class="diff-block__stat diff-line--minus">4 things the exam checks</span>
+          <span class="diff-block__stat diff-line--plus">4 things the job needs</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- THE WHY -->
+    <section class="section section--why">
+      <p class="eyebrow">// why I'm building this</p>
+      <h2 class="section-title">I'm building DevFlex to actually fix this.</h2>
+      <p class="why-body">
+        Stop testing developers like it's 2010 and Google doesn't exist. DevFlex is the
+        app I wish existed when I was getting rejected for the wrong reasons — one that
+        judges you on how you actually solve problems, not how much syntax you crammed.
+      </p>
+      <p class="why-body why-body--small">
+        I'm building it in the open, starting with this page. Join the waitlist and you'll
+        be first to try it — and your input will shape what it becomes.
+      </p>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="section section--final">
+      <div class="final__chrome">
+        <span class="dot dot--red"></span>
+        <span class="dot dot--yellow"></span>
+        <span class="dot dot--green"></span>
+      </div>
+      <h2 class="final__headline">You already prove yourself by shipping.<br>The hiring process just hasn't caught up.</h2>
+      <p class="final__subtext">
+        <i data-lucide="rocket" class="inline-icon"></i>
+        I'm building the app. Join now and you'll be using it before anyone else.
+      </p>
+
+      <form class="waitlist-form waitlist-form--final" id="waitlist-form-final">
+        <label for="email-final" class="sr-only">Email address</label>
+        <input type="email" id="email-final" name="email" placeholder="you@example.com" required autocomplete="email" />
+        <button type="submit" id="submit-btn-final">
+          <span class="btn-label">Join waitlist</span>
+          <span class="btn-arrow">&rarr;</span>
+        </button>
+      </form>
+      <p class="form-note" id="form-note-final">Free for developers, forever.</p>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>🇵🇭 Built for Filipino devs who ship</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
