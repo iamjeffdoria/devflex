@@ -148,3 +148,29 @@ function setupPhoneTabs() {
 }
 
 setupPhoneTabs();
+
+// Navbar mobile menu toggle
+function setupMobileNav() {
+  const burger = document.getElementById("nav-burger");
+  const menu   = document.getElementById("mobile-menu");
+  if (!burger || !menu) return;
+
+  burger.addEventListener("click", () => {
+    const isOpen = menu.classList.toggle("is-open");
+    burger.classList.toggle("is-open", isOpen);
+    burger.setAttribute("aria-expanded", isOpen);
+    menu.setAttribute("aria-hidden", !isOpen);
+  });
+
+  // Close menu when a link is clicked
+  menu.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => {
+      menu.classList.remove("is-open");
+      burger.classList.remove("is-open");
+      burger.setAttribute("aria-expanded", "false");
+      menu.setAttribute("aria-hidden", "true");
+    });
+  });
+}
+
+setupMobileNav();

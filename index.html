@@ -16,11 +16,31 @@
   <div class="noise"></div>
 
   <header class="topbar">
-    <div class="topbar__inner">
-      <span class="logo">dev<span class="logo__accent">flex</span></span>
-      <span class="topbar__tag">// free for devs</span>
-    </div>
-  </header>
+  <div class="topbar__inner">
+    <span class="logo">dev<span class="logo__accent">flex</span></span>
+
+    <!-- Desktop nav -->
+    <nav class="topbar__nav" aria-label="Main navigation">
+      <a href="#moments" class="topbar__link">// the problem</a>
+      <a href="#preview" class="topbar__link">// early look</a>
+      <a href="#why" class="topbar__link">// why I built this</a>
+      <a href="#waitlist-cta" class="topbar__cta">Join waitlist</a>
+    </nav>
+
+    <!-- Mobile hamburger -->
+    <button class="topbar__burger" id="nav-burger" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+
+  <!-- Mobile dropdown -->
+  <div class="topbar__mobile-menu" id="mobile-menu" aria-hidden="true">
+    <a href="#moments" class="topbar__mobile-link">// the problem</a>
+    <a href="#preview" class="topbar__mobile-link">// early look</a>
+    <a href="#why" class="topbar__mobile-link">// why I built this</a>
+    <a href="#waitlist-cta" class="topbar__mobile-cta">Join waitlist →</a>
+  </div>
+</header>
 
   <main>
 
@@ -73,7 +93,7 @@
     </section>
 
     <!-- RELATABLE MOMENTS -->
-    <section class="section section--moments">
+    <section class="section section--moments" id="moments">
       <p class="eyebrow">// what actually happened to me</p>
       <div class="moments-grid">
         <div class="moment-card" data-reveal>
@@ -112,7 +132,7 @@
     </section>
 
     <!-- APP PREVIEW -->
-    <section class="section section--preview">
+    <section class="section section--preview" id="preview">
       <p class="eyebrow">// early look</p>
       <h2 class="section-title">Here's roughly what I'm building.</h2>
       <p class="preview-caption">
@@ -280,7 +300,7 @@
     </section>
 
     <!-- THE WHY -->
-    <section class="section section--why">
+    <section class="section section--why" id="why">
       <p class="eyebrow">// why I'm building this</p>
       <h2 class="section-title">I'm building DevFlex to actually fix this.</h2>
       <p class="why-body">
@@ -295,7 +315,7 @@
     </section>
 
     <!-- FINAL CTA -->
-    <section class="section section--final">
+   <section class="section section--final" id="waitlist-cta">
       <div class="final__chrome">
         <span class="dot dot--red"></span>
         <span class="dot dot--yellow"></span>
