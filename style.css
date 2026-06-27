@@ -488,11 +488,15 @@ main { position: relative; z-index: 1; }
   border-radius: 10px;
   z-index: 3;
 }
+/* AFTER */
 .phone-frame__screen {
   background: var(--bg);
   border-radius: 26px;
   overflow: hidden;
   padding-bottom: 14px;
+  min-height: 520px;
+  display: flex;
+  flex-direction: column;
 }
 
 .app-statusbar {
@@ -550,11 +554,14 @@ main { position: relative; z-index: 1; }
 }
 
 /* FIX: app-screen show/hide — this was completely missing */
+/* AFTER */
 .app-screen {
   display: none;
+  flex: 1;
 }
 .app-screen.is-active {
-  display: block;
+  display: flex;
+  flex-direction: column;
 }
 
 .app-task {
@@ -973,6 +980,7 @@ main { position: relative; z-index: 1; }
 /* ============================================
    RESPONSIVE
    ============================================ */
+/* AFTER */
 @media (max-width: 640px) {
   .moments-grid {
     grid-template-columns: 1fr;
@@ -1002,6 +1010,39 @@ main { position: relative; z-index: 1; }
   }
   .hero__headline {
     word-break: break-word;
+  }
+  .section {
+    padding: 48px 16px;
+  }
+  .building-card {
+    flex-direction: column;
+    gap: 14px;
+    padding: 20px;
+  }
+  .phone-frame {
+    width: 100%;
+    border-radius: 24px;
+    padding: 8px;
+  }
+  .phone-frame__screen {
+    border-radius: 18px;
+    min-height: 480px;
+  }
+  .section--preview {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+  .final__headline {
+    font-size: clamp(18px, 5vw, 26px);
+  }
+  .waitlist-form--final {
+    flex-direction: column;
+  }
+  .waitlist-form--final button {
+    justify-content: center;
+  }
+  .why-body {
+    font-size: 15px;
   }
 }
 
