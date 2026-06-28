@@ -1203,6 +1203,63 @@ main { position: relative; z-index: 1; }
   }
 }
 
+/* ============================================
+   EXPERIENCE VS OUTPUT SECTION
+   ============================================ */
+.xp-body {
+  font-size: 16px;
+  color: var(--text);
+  max-width: 54ch;
+  margin: 0 0 16px;
+  line-height: 1.7;
+}
+
+.xp-diff {
+  margin-top: 28px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+  font-family: var(--font-mono);
+  font-size: 14px;
+}
+
+.xp-diff__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 20px;
+  gap: 16px;
+}
+
+.xp-diff__row--minus {
+  background: var(--minus-bg);
+  color: #ffb3a0;
+  border-bottom: 1px solid var(--border);
+}
+
+.xp-diff__row--plus {
+  background: var(--plus-bg);
+  color: #9fe6ad;
+}
+
+.xp-diff__tag {
+  font-size: 11px;
+  padding: 3px 10px;
+  border-radius: 999px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.xp-diff__tag--minus {
+  background: rgba(247, 129, 102, 0.15);
+  color: var(--minus);
+}
+
+.xp-diff__tag--plus {
+  background: rgba(63, 185, 80, 0.15);
+  color: var(--plus);
+}
+
 /* focus visibility for accessibility */
 a:focus-visible,
 button:focus-visible,
