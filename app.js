@@ -78,6 +78,53 @@ function bumpCountDisplay() {
 wireUpForm("waitlist-form",       "email",       "submit-btn",       "form-note");
 wireUpForm("waitlist-form-final", "email-final", "submit-btn-final", "form-note-final");
 
+// Buy intent — logs to Firestore alongside their email
+function wireUpBuyBtn(btnId, emailInputId, noteId) {
+  const btn   = document.getElementById(btnId);
+  const input = document.getElementById(emailInputId);
+  const note  = document.getElementById(noteId);
+  if (!btn || !input || !note) return;
+
+  btn.addEventListener("click", async () => {
+    const email = input.value.trim();
+
+    if (!isValidEmail(email)) {
+      note.textContent = "Enter your email above first so we know who's interested.";
+      note.classList.add("is-error");
+      note.classList.remove("is-success");
+      input.focus();
+      return;
+    }
+
+    btn.disabled = true;
+    const labelEl = btn.querySelector(".btn-label");
+    if (labelEl) labelEl.textContent = "Noted...";
+    note.classList.remove("is-error");
+
+    try {
+      await addDoc(collection(db, "buy_intent"), {
+        email: email.toLowerCase(),
+        createdAt: serverTimestamp(),
+        source: "landing-page"
+      });
+      note.textContent = "Noted — we'll reach out first when pricing is ready.";
+      note.classList.add("is-success");
+      note.classList.remove("is-error");
+      if (labelEl) labelEl.textContent = "Noted ✓";
+    } catch (err) {
+      console.error("Buy intent failed:", err);
+      note.textContent = "Something went wrong — try again in a moment.";
+      note.classList.add("is-error");
+      note.classList.remove("is-success");
+      btn.disabled = false;
+      if (labelEl) labelEl.textContent = "I'd pay for this";
+    }
+  });
+}
+
+wireUpBuyBtn("buy-btn",       "email",       "form-note");
+wireUpBuyBtn("buy-btn-final", "email-final", "form-note-final");
+
 // Render Lucide icons
 setTimeout(() => {
   if (window.lucide) window.lucide.createIcons();
